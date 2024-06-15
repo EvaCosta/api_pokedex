@@ -1,17 +1,14 @@
-# Use a imagem oficial do Python como base
+# api_pokedex/app/Dockerfile
 FROM python:3.9-slim
 
-# Defina o diretório de trabalho no contêiner
 WORKDIR /app
 
-# Copie o arquivo requirements.txt para o diretório de trabalho
-COPY requirements.txt .
+# Copy requirements file and install dependencies
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Instale as dependências
-RUN pip install -r requirements.txt
-
-# Copie todo o conteúdo do diretório local para o diretório de trabalho no contêiner
+# Copy the rest of the application code
 COPY . .
 
-# Comando padrão para executar o aplicativo FastAPI com Uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+# Command to start the application
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

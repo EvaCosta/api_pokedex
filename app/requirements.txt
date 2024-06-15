@@ -6,3 +6,4 @@ asyncio             # Biblioteca para programação assíncrona em Python (opcio
 cachetools         # Biblioteca para caching em Python (opcional, se necessário)
 pydantic           # Data parsing e validação de dados
 xmltodict
+pytest
