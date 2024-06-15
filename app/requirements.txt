@@ -1,0 +1,8 @@
+fastapi           # Framework web para construir APIs rápidas
+uvicorn            # Servidor ASGI de alto desempenho
+httpx              # Cliente HTTP moderno para Python
+sqlalchemy          # ORM SQL para interagir com bancos de dados relacionais
+asyncio             # Biblioteca para programação assíncrona em Python (opcional, se necessário)
+cachetools         # Biblioteca para caching em Python (opcional, se necessário)
+pydantic           # Data parsing e validação de dados
+xmltodict
